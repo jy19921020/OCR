@@ -65,7 +65,7 @@
              </configuration>
                 -->
                <configuration>
-					<imageName>docker/OCR_linkPage</imageName>
+					<imageName>OCR/OCR_linkPage</imageName>
 					<baseImage>linux/jdk</baseImage>
 					<entryPoint>["java", "-jar", "/${project.build.finalName}.jar"]</entryPoint>
 					<resources>
