@@ -54,8 +54,16 @@
 				<artifactId>spring-boot-maven-plugin</artifactId><!-- 用于Springboot应用的打包-->
 			
 			<configuration><!-- 配置docker镜像的明细 -->
-                   <repository>${docker.image.prefix}/${project.artifactId}</repository>
-             </configuration>
+                    <imageName>${docker.image.prefix}/${project.artifactId}</imageName>
+                    <dockerDirectory>src/main/docker</dockerDirectory>
+                    <resources>
+                        <resource>
+                            <targetPath>/</targetPath>
+                            <directory>${project.build.directory}</directory>
+                            <include>${project.build.finalName}.jar</include>
+                        </resource>
+                    </resources>
+      </configuration>
                 
 			</plugin>
 		</plugins>
