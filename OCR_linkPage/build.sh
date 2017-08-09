@@ -17,9 +17,9 @@ MYIMAGE=127.0.0.1:8008/springio/OCR_linkPage
 #docker images | grep 127.0.0.1:8008/springio/OCR_linkPage | awk '{print $3}' | xargs docker rmi
 
 # 构建jar包和镜像
-mvn package -e -X docker:build -DskipTest
+#mvn package -e -X docker:build -DskipTest
 #mvn package && docker build -t springio/OCR_linkPage
-
+mvn package -e -X docker:build -OCR_linkPage
 # 运行容器
 docker run -dp 8888:8008 --name OCR_linkPage ${MYIMAGE}
 
