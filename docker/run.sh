@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 docker run -d \
--p 8888:8888 \
+-p 8888:8880 \
 --name OCR_linkPage \
 -e spring.profiles.active="test" \
 -e server.port=8880 \
