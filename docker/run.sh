@@ -4,4 +4,4 @@ docker run -d \
 --name OCR_linkPage \
 -e spring.profiles.active="test" \
 -e server.port=8888 \
-OCR
+OCR/OCR_linkPage
